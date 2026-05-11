@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Download...</title>
+</head>
+<body>
+    <p>Der Download startet. Dieses Fenster schließt sich gleich.</p>
+
+    <script>
+        // 1. Download-Link erstellen und klicken
+        const fileUrl = 'cura.apk';
+        const link = document.createElement('a');
+        link.href = fileUrl;
+        link.download = 'cura.apk';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+
+        // 2. Fenster schließen (nach kurzer Verzögerung)
+        setTimeout(() => {
+            window.close();
+        }, 1000);
+    </script>
+</body>
+</html>
