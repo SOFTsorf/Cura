@@ -89,15 +89,15 @@
             letter-spacing: -2px;
         }
 
-        .hero .android-only {
+        .hero .tag {
             display: inline-block;
             background: rgba(29, 185, 84, 0.1);
             color: var(--accent);
             padding: 5px 15px;
             border-radius: 20px;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: bold;
-            margin-bottom: 20px;
+            margin: 0 5px 20px;
             text-transform: uppercase;
             letter-spacing: 1px;
             border: 1px solid var(--accent);
@@ -109,18 +109,6 @@
             max-width: 600px;
             margin: 0 auto 40px;
         }
-
-        /* Stats */
-        .stats {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            margin-top: 60px;
-            flex-wrap: wrap;
-        }
-
-        .stat-item h4 { font-size: 2rem; color: var(--accent); }
-        .stat-item p { font-size: 0.8rem; text-transform: uppercase; color: var(--text-dim); }
 
         /* Buttons */
         .btn-google-play {
@@ -143,11 +131,10 @@
             border-color: var(--accent);
         }
 
-        /* Sections General */
+        /* Features */
         section { padding: 100px 10%; }
         h2 { font-size: 2.5rem; margin-bottom: 50px; text-align: center; }
 
-        /* Features */
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -164,8 +151,8 @@
         .f-card:hover { transform: translateY(-5px); background: #222; }
         .f-card h3 { margin-bottom: 15px; color: var(--accent); }
 
-        /* Free Highlight */
-        .free-banner {
+        /* Status Banner */
+        .status-banner {
             background: linear-gradient(90deg, #121212 0%, #1e1e1e 100%);
             padding: 60px;
             border-radius: 20px;
@@ -173,8 +160,8 @@
             border: 1px solid #333;
         }
 
-        .free-banner h3 { font-size: 2rem; margin-bottom: 15px; }
-        .free-banner p { color: var(--text-dim); margin-bottom: 0; }
+        .status-banner h3 { font-size: 2rem; margin-bottom: 15px; }
+        .status-banner p { color: var(--text-dim); max-width: 700px; margin: 0 auto; }
 
         /* FAQ */
         .faq { max-width: 800px; margin: 0 auto; }
@@ -201,7 +188,6 @@
         @media (max-width: 768px) {
             .footer-grid { grid-template-columns: 1fr; }
             .hero h1 { font-size: 2.8rem; }
-            .stats { gap: 20px; }
         }
     </style>
 </head>
@@ -214,69 +200,66 @@
         </a>
         <div class="nav-links">
             <a href="#features">Features</a>
-            <a href="#about">Über Cura</a>
+            <a href="#status">Roadmap</a>
             <a href="#faq">FAQ</a>
         </div>
     </nav>
 
     <header class="hero">
-        <span class="android-only">Exklusiv für Android</span>
-        <h1>Dein Radio.<br>Deine Podcasts.</h1>
-        <p>Cura bringt die ganze Welt des Audios auf dein Smartphone. Komplett kostenlos, ohne versteckte Kosten und optimiert für dein Android-Erlebnis.</p>
+        <div>
+            <span class="tag">Android Exklusiv</span>
+            <span class="tag">100% Kostenlos</span>
+        </div>
+        <h1>Audio ohne Umwege.</h1>
+        <p>Einfach App öffnen und loshören. Cura bietet dir direkten Zugriff auf globale Radiosender und Podcasts – ohne Anmeldung, ohne Barrieren.</p>
         
         <a href="#" class="btn-google-play">
             <div style="text-align: left;">
                 <small style="display: block; font-size: 0.6rem; text-transform: uppercase;">Jetzt laden für</small>
-                <span>Android App</span>
+                <span>Android</span>
             </div>
         </a>
-        
-        <div class="stats">
-            <div class="stat-item"><h4>80k+</h4><p>Sender</p></div>
-            <div class="stat-item"><h4>Free</h4><p>Nutzung</p></div>
-            <div class="stat-item"><h4>100%</h4><p>Mobil</p></div>
-        </div>
     </header>
 
     <section id="features">
-        <h2>Perfekt für dein Phone</h2>
+        <h2>Deine Welt im Ohr</h2>
         <div class="features-grid">
             <div class="f-card">
-                <h3>Globales Radio</h3>
-                <p>Live-Streams von lokalen Sendern und internationalen Stationen direkt in deiner Tasche.</p>
+                <h3>Kein Login-Zwang</h3>
+                <p>Starte die App und höre sofort zu. Wir sammeln keine unnötigen Daten, bevor du überhaupt den ersten Ton hörst.</p>
             </div>
             <div class="f-card">
-                <h3>Native Android</h3>
-                <p>Flüssige Performance und Integration in dein System – vom Lockscreen bis zu den Benachrichtigungen.</p>
+                <h3>Live & On-Demand</h3>
+                <p>Wechsle fließend zwischen Echtzeit-Radioübertragungen und den neuesten Podcast-Episoden.</p>
             </div>
             <div class="f-card">
-                <h3>Einfach Suchen</h3>
-                <p>Finde Podcasts nach Kategorien oder entdecke Radiosender per Weltkarte.</p>
+                <h3>Android Optimized</h3>
+                <p>Volle Unterstützung für Android-Features wie Bild-im-Bild, Media-Controls und Batteriesparmodi.</p>
             </div>
         </div>
     </section>
 
-    <section id="about">
-        <div class="free-banner">
-            <h3>Alles inklusive. Für immer.</h3>
-            <p>Wir glauben, dass guter Content frei zugänglich sein sollte. Cura ist zu 100% kostenlos. Keine Abos, keine Pakete, einfach nur Audio.</p>
+    <section id="status">
+        <div class="status-banner">
+            <h3>Was kommt als Nächstes?</h3>
+            <p>Aktuell genießt du Cura völlig anonym. Wir arbeiten aber bereits an einem optionalen Account-System, damit du deine Favoriten bald auf all deinen Android-Geräten synchronisieren kannst.</p>
         </div>
     </section>
 
     <section id="faq">
-        <h2>Fragen zu Cura</h2>
+        <h2>Gut zu wissen</h2>
         <div class="faq">
             <div class="faq-item">
-                <h4>Gibt es Cura für das iPhone?</h4>
-                <p>Aktuell konzentrieren wir uns voll und ganz auf die Android-Plattform, um dort das bestmögliche Erlebnis zu bieten.</p>
+                <h4>Muss ich mich registrieren?</h4>
+                <p>Nein! Cura funktioniert aktuell komplett ohne Account. Einfach installieren und streamen.</p>
             </div>
             <div class="faq-item">
-                <h4>Kostet die Nutzung wirklich nichts?</h4>
-                <p>Ja. Cura ist eine reine Free-App. Du hast Zugriff auf alle Funktionen, Radiosender und Podcasts ohne monatliche Gebühren.</p>
+                <h4>Wann kommen die Accounts?</h4>
+                <p>Das Account-System befindet sich in der Entwicklung. Es wird optional sein, um deine Favoriten und den Hörverlauf zu speichern.</p>
             </div>
             <div class="faq-item">
-                <h4>Benötige ich einen Account?</h4>
-                <p>Du kannst sofort loshören. Ein Account hilft dir lediglich dabei, deine Favoriten über mehrere Android-Geräte zu synchronisieren.</p>
+                <h4>Warum nur für Android?</h4>
+                <p>Wir möchten auf einer Plattform starten und dort das perfekte Nutzererlebnis bieten, anstatt auf vielen Geräten nur "okay" zu sein.</p>
             </div>
         </div>
     </section>
@@ -289,7 +272,7 @@
                     CURA
                 </div>
                 <p style="color: var(--text-dim); font-size: 0.9rem; max-width: 400px;">
-                    Die mobile Audio-Lösung für Android-Nutzer. Podcasts und Radio in einer App vereint.
+                    Die unkomplizierte Audio-Lösung für Android. Podcasts und Radio ohne Grenzen.
                 </p>
             </div>
             <div style="text-align: right; color: var(--text-dim); font-size: 0.8rem;">
